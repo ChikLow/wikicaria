@@ -4,8 +4,8 @@
 }
 
 body{
-    background: #530953;
-    color: white;
+    background: #8e8989;
+    color: rgb(0, 0, 0);
 }
 
 .my-btn{
@@ -19,4 +19,18 @@ body{
     text-decoration: none;
     border: 3px solid #ffffff;
     border-radius: 10px;
+}
+
+main{
+    min-height: 90vh;
+}
+
+footer{
+    background-color: rgb(38, 38, 38);
+    padding: 50px;
+    color: #ffffff;
+}
+header{
+    background-color: rgb(38, 38, 38);
+    color: #ffffff;
 }

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+ 
+{% block title %}
+<title> Пост </title>
+{% endblock title %}
+
+{% block content %}
+<!-- Вміст сторінки -->
+<div class="container">
+   <img src="{{ url_for('static', filename='img/logo.png') }}" style="width:100%;max-width:500px" class="img-fluid" alt="...">
+</div>
+{% endblock content %}

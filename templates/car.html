@@ -7,6 +7,16 @@
 {% block content %}
 <!-- Вміст сторінки -->
 <div class="container">
-   <img src="{{ url_for('static', filename='img/logo.png') }}" style="width:100%;max-width:500px" class="img-fluid" alt="...">
+   <div class="row">
+      <div class="col">
+         <img style='min-height:200px;'src="{{ url_for('static', filename='img/'+car[8]) }}"alt="...">
+      </div>
+      <div class="col">
+         <h5>{{car[2]}}</h5>
+  
+         <p>{{car[3] | safe}}</p>
+      </div>
+      
+   </div>
 </div>
 {% endblock content %}

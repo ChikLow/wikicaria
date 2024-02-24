@@ -11,10 +11,10 @@ def index():
     cars = db.get_all_cars()
     return render_template("index.html", title = "site about cars",cars=cars)
 
-@app.route("/car")
-def car():
-    cars = db.get_all_cars()
-    return render_template("car.html", title = "site about cars",cars=cars)
+@app.route("/car/<car_id>")
+def car(car_id):
+    car = db.get_car(car_id)
+    return render_template("car.html", title = "site about cars",car=car)
 
 
 

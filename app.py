@@ -14,7 +14,7 @@ def index():
 @app.route("/car/<car_id>")
 def car(car_id):
     car = db.get_car(car_id)
-    return render_template("car.html", title = "site about cars",car=car)
+    return render_template("car.html",title = "site about cars",car=car)
 
 
 

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
  
 {% block title %}
-<title> Пост </title>
+<title>{{car[1],car[2]}}</title>
 {% endblock title %}
 
 {% block content %}
@@ -9,12 +9,20 @@
 <div class="container">
    <div class="row">
       <div class="col">
-         <img style='min-height:200px;'src="{{ url_for('static', filename='img/'+car[8]) }}"alt="...">
+         <img style='width:100%;min-height:200px;'src="{{ url_for('static', filename='img/'+car[8]) }}"alt="...">
       </div>
       <div class="col">
+         <h4>{{car[1]}}</h4>
          <h5>{{car[2]}}</h5>
-  
-         <p>{{car[3] | safe}}</p>
+         <h5>{{car[3] | safe}}</h5>
+         <b>Характеристики:</b>
+         <p>{{car[4] | safe}}</p>
+         <p>{{car[5] | safe}}</p>
+         <p>{{car[6] | safe}}</p>
+         <p>{{car[7] | safe}}</p>
+         <p>{{car[9] | safe}}</p>
+         <p>{{car[10] | safe}}</p>
+
       </div>
       
    </div>

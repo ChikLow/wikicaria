@@ -27,3 +27,11 @@ class CarsDB():
         data = self.cursor.fetchone()
         self.close()
         return data
+    
+    def search_car(self,query):
+        self.open()
+        query = '%' + query + '%'
+        self.cursor.execute("SELECT * FROM cars WHERE (brand LIKE ? OR series LIKE ? OR kuzov LIKE ? OR year LIKE ?)", [query,query,query,query])
+        data = self.cursor.fetchall()
+        self.close()
+        return data

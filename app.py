@@ -16,6 +16,12 @@ def car(car_id):
     car = db.get_car(car_id)
     return render_template("car.html",title = "site about cars",car=car)
 
+@app.route("/search")
+def search():
+    query = request.args.get("query")
+    cars = db.search_car(query)
+    return render_template("index.html", title = "site about cars",cars=cars)
+
 
 
 
